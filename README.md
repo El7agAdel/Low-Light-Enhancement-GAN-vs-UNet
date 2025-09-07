@@ -5,7 +5,9 @@ The repo contains an implementation for a GAN network and an implementation for 
 
 
 
-Adel Hamed Adel Mohamed - 2301581
-Ahmed Mostafa kamal - 2400061
-Ali Elsayed Ali Ahmed - 2400070
+# Adel Hamed Adel Mohamed - 2301581
+
+# Ahmed Mostafa kamal - 2400061
+
+# Ali Elsayed Ali Ahmed - 2400070
 
