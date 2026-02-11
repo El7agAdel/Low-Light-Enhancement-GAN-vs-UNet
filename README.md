@@ -1,45 +1,99 @@
-# Low-Light Enhancement — GAN vs. U-Net
+# 🌙 Low-Light Enhancement — GAN vs U-Net
 
-A small research/engineering project comparing **two deep-learning approaches for low-light image enhancement**:
+A comparative deep learning study evaluating:
 
-- **GAN-based enhancement** (adversarial training to push results toward realistic-looking outputs)
-- **U-Net-based enhancement** (strong supervised baseline with skip connections to preserve structure)
+- 🔥 GAN-based low-light enhancement
+- 🧠 U-Net supervised enhancement
 
-This repository was created as a **CSE 681 project container** and includes both implementations, plus the project report and presentation. :contentReference[oaicite:1]{index=1}
-
----
-
-## Contents
-
-- `GAN/` — GAN-based low-light enhancement implementation :contentReference[oaicite:2]{index=2}  
-- `Unet/` — U-Net enhancement implementation :contentReference[oaicite:3]{index=3}  
-- `Report.pdf` — full report (methodology, experiments, results) :contentReference[oaicite:4]{index=4}  
-- `Presentation.pdf` — slides :contentReference[oaicite:5]{index=5}  
-- `README.md` — this file :contentReference[oaicite:6]{index=6}  
-- **Presentation video** — linked in the repo landing page (YouTube) :contentReference[oaicite:7]{index=7}  
-
-> Note: Most of the code is in notebooks (repo language shows Jupyter Notebook). :contentReference[oaicite:8]{index=8}
+This project analyzes visual quality, convergence behavior, and model stability when restoring low-light images.
 
 ---
 
-## Project Goal
+# 📌 Project Overview
 
-Low-light images often suffer from:
-- low visibility / crushed shadows
-- noise amplification when brightness is increased
-- color shifts and loss of detail
+Low-light images typically suffer from:
+- Poor visibility
+- Loss of contrast
+- Noise amplification
+- Color distortion
 
-This project evaluates how a **GAN** compares to a **U-Net** baseline in:
-- brightness/contrast recovery
-- detail preservation
-- artifact/noise behavior
-- overall perceptual quality
+This project compares two approaches:
+
+| Model | Type | Learning Strategy |
+|-------|------|-------------------|
+| GAN   | Adversarial | Generator vs Discriminator |
+| U-Net | Supervised  | Encoder–Decoder with skip connections |
 
 ---
 
-## Quick Start
+# 🔥 GAN Results
 
-### 1) Clone
+## 🖼 Visual Comparison
+
+<img src="assets/gan_results.png" width="100%">
+
+- **Result** → Generated enhanced image  
+- **High Light** → Ground truth  
+- **Low Light** → Input  
+- **High - Result** → Difference map  
+
+---
+
+## 📈 GAN Training Curves
+
+<img src="assets/gan_training.png" width="100%">
+
+### Observations:
+
+- Generator loss stabilizes quickly
+- Discriminator accuracy approaches ~100%
+- Precision & recall converge strongly
+- Balanced adversarial training achieved
+
+This indicates stable GAN convergence without collapse.
+
+---
+
+# 🧠 U-Net Results
+
+## 🖼 Visual Comparison
+
+<img src="assets/unet_results.png" width="100%">
+
+U-Net produces:
+- Strong brightness recovery
+- Stable structural preservation
+- Less adversarial texture hallucination
+
+---
+
+## 📈 U-Net Training Curves
+
+<img src="assets/unet_training.png" width="100%">
+
+### Observations:
+
+- Smooth training loss convergence
+- Validation accuracy fluctuates slightly
+- Recall remains stable
+- Precision trends downward slightly (possible mild overfitting)
+
+---
+
+# ⚖️ GAN vs U-Net Comparison
+
+| Criteria | GAN | U-Net |
+|-----------|------|-------|
+| Visual realism | ⭐⭐⭐⭐ | ⭐⭐⭐ |
+| Structural preservation | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| Training stability | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| Sharpness | High | Moderate |
+| Overfitting risk | Medium | Low |
+
+---
+
+# 🧪 How To Run
+
 ```bash
 git clone https://github.com/El7agAdel/Low-Light-Enhancement-GAN-vs-UNet.git
 cd Low-Light-Enhancement-GAN-vs-UNet
