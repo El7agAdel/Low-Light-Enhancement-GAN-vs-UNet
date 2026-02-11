@@ -30,7 +30,7 @@ This project compares two approaches:
 
 ## 🖼 Visual Comparison
 
-<img src="assets/gan_results.png" width="100%">
+<img src="Assets/gan_results.png" width="100%">
 
 - **Result** → Generated enhanced image  
 - **High Light** → Ground truth  
@@ -41,7 +41,7 @@ This project compares two approaches:
 
 ## 📈 GAN Training Curves
 
-<img src="assets/gan_training.png" width="100%">
+<img src="Assets/gan_training.png" width="100%">
 
 ### Observations:
 
@@ -58,7 +58,7 @@ This indicates stable GAN convergence without collapse.
 
 ## 🖼 Visual Comparison
 
-<img src="assets/unet_results.png" width="100%">
+<img src="Assets/unet_results.png" width="100%">
 
 U-Net produces:
 - Strong brightness recovery
@@ -69,7 +69,7 @@ U-Net produces:
 
 ## 📈 U-Net Training Curves
 
-<img src="assets/unet_training.png" width="100%">
+<img src="Assets/unet_training.png" width="100%">
 
 ### Observations:
 
